@@ -51,8 +51,6 @@ const QuestionPage = (props) => {
           handleAddAnswerToQuestion(authedUser, id, event.currentTarget.id)
         );
         setTimeout(() => res("success"), 1000);
-      }).then(() => {
-        console.log("Answer saved successfully.");
       });
     }
   };

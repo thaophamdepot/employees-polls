@@ -49,7 +49,7 @@ const Nav = (props) => {
                   <NavButton text="Home" href="/" />
                   <NavButton
                     text="Leaderboard"
-                    href="leaderboard"
+                    href="/leaderboard"
                   />
                   <NavButton
                     text="New"
@@ -75,7 +75,7 @@ const Nav = (props) => {
                     {props.users[props.authedUser].name}
                   </Typography>
                 </Stack>
-                <NavButton text="Logout" href="logout" />
+                <NavButton text="Logout" href="/logout" />
               </Stack>
             ) : (
               <Stack direction="row" spacing={2}>

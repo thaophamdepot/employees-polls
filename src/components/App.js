@@ -25,8 +25,8 @@ const App = (props) => {
           <Route path="/question/:id" element={<QuestionPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<LeaderBoard />} />
-          <Route path="logout" element={<Logout />} />
-          <Route path="/404" element={<Page404 />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/*" element={<Page404 />} />
         </Routes>
       ) : (
         <Routes>

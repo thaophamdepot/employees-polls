@@ -76,7 +76,7 @@ const LeaderBoard = (props) => {
         }}
       >
         <TableContainer sx={{ maxHeight: 420 }}>
-          <Table stickyHeawder aria-label="sticky table" classes={"striped"}>
+          <Table aria-label="sticky table">
             <TableHead>
               <StyledTableRow>
                 {columns.map((column) => (

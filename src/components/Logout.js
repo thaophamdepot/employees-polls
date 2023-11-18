@@ -1,14 +1,14 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAuthedUser } from "../actions/authedUser";
+import { useEffect } from "react";
 
 const Logout = (props) => {
   const navigate = useNavigate();
-  React.useEffect(() => {
+  useEffect(() => {
     navigate("/login");
-  }, [navigate]);
-  props.dispatch(setAuthedUser(null));
+    props.dispatch(setAuthedUser(null));
+  }, [navigate, props]);
   localStorage.clear();
   sessionStorage.clear();
 };

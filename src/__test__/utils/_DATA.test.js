@@ -6,8 +6,6 @@ describe("_getUsers", () => {
 
     const numUsers = Object.keys(users).length;
 
-    console.log("numUsers", numUsers);
-
     expect(numUsers).toBe(4);
   });
 });
