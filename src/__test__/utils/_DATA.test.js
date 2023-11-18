@@ -1,4 +1,28 @@
-import { _saveQuestion, _saveQuestionAnswer } from "../../utils/_DATA";
+import { _saveQuestion, _saveQuestionAnswer, _getUsers, _getQuestions } from "../../utils/_DATA";
+
+describe("_getUsers", () => {
+  test("returns users", async () => {
+    const users = await _getUsers();
+
+    const numUsers = Object.keys(users).length;
+
+    console.log("numUsers", numUsers);
+
+    expect(numUsers).toBe(4);
+  });
+});
+
+describe("_getQuestions", () => {
+  test("returns questions", async () => {
+    const questions = await _getQuestions();
+
+    const numQuestions = Object.keys(questions).length;
+
+    console.log("numQuestions", numQuestions);
+
+    expect(numQuestions).toBe(6);
+  });
+});
 
 describe("Save question success testing.", () => {
   it("will return success with question object if optionOneText, optionTwoText and author are found", async () => {

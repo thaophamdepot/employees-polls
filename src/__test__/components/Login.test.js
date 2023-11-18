@@ -123,7 +123,7 @@ describe("Login component - Snapshot testing", () => {
   });
 
   test("renders Login component with toMatchSnapshot in UI", () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 });
 

@@ -60,6 +60,7 @@ const NewQuestion = (props) => {
               name="optionOne"
               autoComplete="optionOne"
               autoFocus
+              data-testid="optionOne"
             />
             <TextField
               margin="normal"
@@ -69,6 +70,7 @@ const NewQuestion = (props) => {
               type="optionTwo"
               id="optionTwo"
               placeholder="Option Two"
+              data-testid="optionTwo"
             />
             <Button
               type="submit"
@@ -76,6 +78,7 @@ const NewQuestion = (props) => {
               variant="contained"
               color="primary"
               sx={{ mt: 3, mb: 2 }}
+              data-testid="submit-poll"
             >
               Submit
             </Button>

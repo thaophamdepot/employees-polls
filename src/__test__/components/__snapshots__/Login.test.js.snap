@@ -8,7 +8,7 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
     className="MuiBox-root css-binzgt"
   >
     <h1
-      className="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+      className="MuiTypography-root MuiTypography-h5 css-bezmlo-MuiTypography-root"
     >
       Log In
     </h1>
@@ -17,13 +17,14 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
       onSubmit={[Function]}
     >
       <label>
-        Select user:
+        User:
       </label>
       <div
         className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         onClick={[Function]}
       >
         <div
+          aria-controls=":r8:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="demo-simple-select-required-label demo-simple-select-required"
@@ -33,7 +34,7 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
           onFocus={[Function]}
           onKeyDown={[Function]}
           onMouseDown={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <span
@@ -44,10 +45,12 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
         </div>
         <input
           aria-hidden={true}
+          aria-invalid={false}
           className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           onAnimationStart={[Function]}
           onChange={[Function]}
           tabIndex={-1}
+          value=""
         />
         <svg
           aria-hidden={true}
@@ -65,7 +68,7 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
           className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            className="css-1ftyaf0"
+            className="css-yjsfm1"
           >
             <span>
               Username
@@ -78,7 +81,7 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
         data-testid="password"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink={false}
           htmlFor="password"
           id="password-label"
@@ -146,7 +149,7 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
             className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              className="css-1ftyaf0"
+              className="css-yjsfm1"
             >
               <span>
                 Password
@@ -156,7 +159,7 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
         </div>
       </div>
       <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth css-w6gn9e-MuiButtonBase-root-MuiButton-root"
+        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1vhaqj4-MuiButtonBase-root-MuiButton-root"
         data-testid="sign-in"
         disabled={false}
         onBlur={[Function]}
@@ -174,7 +177,15 @@ exports[`Login component - Snapshot testing renders Login component with toMatch
         tabIndex={0}
         type="submit"
       >
-        Log In
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Log In
+        </span>
       </button>
     </form>
   </div>

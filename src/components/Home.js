@@ -30,21 +30,19 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     textAlign: "center",
-    
+
     padding: 2 * 3,
     fontFamily: "sans-serif"
   },
   subheading: {
     lineHeight: 1.8,
-    
+
   },
 }));
-
 const QuestionDashBoard = (props) => {
   const navigate = useNavigate();
   const classes = useStyles();
   const questions = props.questions;
-
   const handleClick = (event, qid) => {
     event.preventDefault();
     if (qid.trim() !== "") {
@@ -61,7 +59,7 @@ const QuestionDashBoard = (props) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          
+
         }}
       >
         <Box border="1px" padding="5px">
@@ -132,7 +130,7 @@ const QuestionDashBoard = (props) => {
                             </Stack>
                           </Box>
                           <Typography variant="subtitle2"
-                          color={"#b5b5b1"}>
+                            color={"#b5b5b1"}>
                             {new Intl.DateTimeFormat("en-US", {
                               year: "numeric",
                               month: "2-digit",
@@ -172,16 +170,44 @@ const QuestionDashBoard = (props) => {
 const Home = (props) => {
   const theme = createTheme();
   const { questionsData } = props;
+  const [showUnanswered, setShowUnanswered] = React.useState(true);
+  const [showAnswered, setShowAnswered] = React.useState(false);
+
+  const toggleShowUnanswered = () => {
+    setShowUnanswered(!showUnanswered);
+  };
+  const toggleShowAnswered = () => {
+    setShowAnswered(!showAnswered);
+  };
   return (
     <ThemeProvider theme={theme}>
+      <div style={{margin:10}}>
+        <label>
+          <input type="checkbox"
+            checked={showUnanswered}
+            onChange={toggleShowUnanswered} />
+          Show new questions
+        </label>
+        <br></br>
+        <label>
+          <input type="checkbox"
+            checked={showAnswered}
+            onChange={toggleShowAnswered} />
+          Show answered question
+        </label>
+      </div>
+      {showUnanswered && (
       <QuestionDashBoard
-        title="New Question"
+        title="New Questions"
         questions={questionsData.newQuestions}
       />
+      )}
+      {showAnswered && (
       <QuestionDashBoard
-        title="Done"
+        title="Answered Questions"
         questions={questionsData.answeredQuestions}
       />
+      )}
     </ThemeProvider>
   );
 };
