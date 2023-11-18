@@ -8,6 +8,7 @@ In your app, users will be able to answer polls, see which polls they haven’t 
 
 - Clone the repository `git clone https://github.com/thaophamdepot/employees-polls.git`
 - Install dependencies `cd employees-polls` and `npm install`
+- Run `npm install @mui/material` if require
 - Run `npm run start`
 - Navigate to `http://localhost:3000/` to access the Login page
 
